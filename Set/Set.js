@@ -57,7 +57,7 @@ module.exports = class Set{
     }
     //O conjunto existe dentro do outro conjunto?
     isSubsetOf(anotherSet){
-        if(this.size() > anotherSet.size()) return;
+        if(this.size() > anotherSet.size()) return false;
         let isSubset = true
         this.values().every(value => {
             if(!anotherSet.has(value)){
