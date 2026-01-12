@@ -31,8 +31,8 @@ module.exports = class Set{
     union(anotherSet){
         const unionSet = new Set()
         //Para cada valor do set, vai ser colocado no unionSet
-        this.values().forEach(value => unionSet.add(value))
-        anotherSet.values().forEach(value => unionSet.add(value))
+        this.values().forEach(value => unionSet.add(value)) 
+        anotherSet.values().forEach(value => unionSet.add(value)) //o método add ignora valores repetidos
         return unionSet
     }
     //O que eles tem em comum?
