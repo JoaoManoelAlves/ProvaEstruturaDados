@@ -10,7 +10,7 @@ function defaultToString(item) {
     return item.toString(); // {1}
 }
 
-class HashTable{
+module.exports = class HashTable{
     constructor(toStrFn = defaultToString){
         this.toStrFn = toStrFn
         this.table = {}
