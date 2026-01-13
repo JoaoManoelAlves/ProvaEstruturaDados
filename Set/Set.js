@@ -1,15 +1,15 @@
 
-//Set são listas que apresentam pares de chave e valor, porém sem elementos repetidos
+// Um Set armazena apenas VALORES únicos (não permite elementos repetidos)
 module.exports = class Set{
     constructor(){
         this.lista = {}
         this.count = 0
     }
-    //Verifica se ja existe um par de chave e valor no set
+    // Verifica se um elemento já existe no conjunto
     has(element){
         return Object.prototype.hasOwnProperty.call(this.lista, element)
     }
-    //Adicionar uma chave e valor
+    // Adiciona um novo elemento ao conjunto
     add(element){
         if(!this.has(element)){
             this.lista[element] = element
@@ -18,7 +18,7 @@ module.exports = class Set{
         }
         return false
     }
-    //Deleta a chave e valor
+    // Remove um elemento do conjunto
     delete(element){
         if(this.has(element)){
             delete this.lista[element]
@@ -27,7 +27,7 @@ module.exports = class Set{
         }
         return false
     }
-    //A junção de todos os dados que eles tem
+    // Retorna um novo Set contendo todos os elementos
     union(anotherSet){
         const unionSet = new Set()
         //Para cada valor do set, vai ser colocado no unionSet
