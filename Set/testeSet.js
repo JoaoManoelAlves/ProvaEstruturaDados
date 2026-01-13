@@ -1,4 +1,4 @@
-const Set = require('./set.js')
+const Set = require('./Set.js');
 
 const SetA = new Set
 SetA.add(1)
