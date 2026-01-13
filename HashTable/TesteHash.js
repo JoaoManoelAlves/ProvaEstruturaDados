@@ -1,6 +1,6 @@
 const TesteHash = require('./hashtable.js')
   
-const hash = new HashTable();
+const hash = new TesteHash();
 hash.put('Bruno', 'bruno@email.com');
 hash.put('João', 'joao@email.com');
 hash.put('Ester', 'ester@email.com');
