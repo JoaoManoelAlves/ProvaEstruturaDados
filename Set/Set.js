@@ -1,6 +1,6 @@
 
 
-//Set são listas que apresentam pares de chave e valor, porém sem elementos repetidos
+//Set são listas que apresentam pares de chave e valor, porém sem valores repetidos
 module.exports = class ListaSet {
     constructor() {
         this.lista = {};
