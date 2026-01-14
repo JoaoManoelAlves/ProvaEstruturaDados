@@ -34,7 +34,7 @@ module.exports = class ListaSet {
 
     // Retorna um novo Set contendo todos os elementos
     union(anotherSet){
-        const unionSet = new Set()
+        const unionSet = new ListaSet()
         //Para cada valor do set, vai ser colocado no unionSet
         this.values().forEach(value => unionSet.add(value));
         anotherSet.values().forEach(value => unionSet.add(value)); //o método add ignora valores repetidos
