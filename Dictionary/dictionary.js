@@ -22,7 +22,7 @@ class ValuePair{
 }
 
 //Classe dicionário
-class Dictionary{
+module.exports = class Dictionary{
     constructor(toStrFn = defaultToString){
         this.toStrFn = toStrFn
         this.table = {}
@@ -52,7 +52,7 @@ class Dictionary{
     //Procura o valor referente a chave
     get(key){
         const valuePair = this.table[this.toStrFn(key)]
-        return valuePair == null ? undefined : valuePair.value
+        return valuePair == null ? undefined : valuePair.value //se a chave for nula retorna undefined, senão retorna o valor referente a chave
     }
 
     clear(){
