@@ -1,4 +1,5 @@
 
+
 //Set são listas que apresentam pares de chave e valor, porém sem elementos repetidos
 module.exports = class ListaSet {
     constructor() {
@@ -15,21 +16,25 @@ module.exports = class ListaSet {
             this.lista[element] = element;
             this.count++;
             return true;
+
         }
         return false;
     }
-    //Deleta a chave e valor
-    delete(element) {
-        if (this.has(element)) {
-            delete this.lista[element];
-            this.count--;
-            return true;
+
+    // Remove um elemento do conjunto
+    delete(element){
+        if(this.has(element)){
+            delete this.lista[element]
+            this.count--
+            return true
+
         }
         return false;
     }
-    //A junção de todos os dados que eles tem
-    union(anotherSet) {
-        const unionSet = new ListaSet();
+
+    // Retorna um novo Set contendo todos os elementos
+    union(anotherSet){
+        const unionSet = new Set()
         //Para cada valor do set, vai ser colocado no unionSet
         this.values().forEach(value => unionSet.add(value));
         anotherSet.values().forEach(value => unionSet.add(value)); //o método add ignora valores repetidos
